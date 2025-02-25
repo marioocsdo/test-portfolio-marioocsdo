@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="welcome">
+
+
+        
+        <div class="carousel animated">
+            <div class="group animated">
+                <div class="card">developer </div>
+                <div class="card">designer</div>
+                <div class="card">junior</div>
+            </div>
+            <div aria-hidden="true" class="group animated">
+                <div class="card">developer</div>
+                <div class="card">designer</div>
+                <div class="card">junior</div>
+            </div>
+        </div>
+
+        <div class="welcome_button">
+            <button class="welcome_button_b" onclick="EsconderDiv()">
+                Welcome
+            </button>
+        </div>
+
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <p>marioocsdo.dev</p>
+            <p>contact@marioocsdo.dev</p>
+            <span style="display: flex; flex-direction: row; justify-content: space-between; width: 10%;">
+                <p>About</p>
+                <p>Works</p>
+                <p>Contact</p>
+            </span>
+        </div>
+
+        <img src="avatar.png" alt="spline" id="spline" class="spline">
+        
+    </div>
+</body>
+</html>
+
+<script>
+    const welcome = document.querySelector(".welcome");
+    const spline = document.querySelector('.spline');
+    const header = document.querySelector('.header');
+
+    function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+    async function EsconderDiv() {
+        welcome.style.opacity = 0;
+        welcome.style.transitionDuration = "1s";
+        if (welcome.style.opacity == 0) {
+            await sleep(1000)
+            welcome.remove()
+            header.style.transform = "translateY(40px)";
+            header.style.transitionDuration = '1s'
+            spline.style.transform = 'translateY(-80%)'
+            spline.style.opacity = .6;
+            spline.style.transitionDuration = '1s'
+        }
+
+        
+    }
+</script>
+

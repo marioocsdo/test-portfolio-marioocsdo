@@ -1,0 +1,154 @@
+body{
+    background-color: #0a0908;
+    color: white;    
+    font-family: 'San Francisco';
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 100;
+    font-size: larger;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
+
+.welcome{
+    width: 101dvw;
+    height: 101dvh;
+    background: #0A0A0A;
+    margin: -1%;
+    position: absolute;
+}
+
+
+  .carousel {
+    margin: 0 auto;
+    padding: 10% 0;
+    max-width: 100dvw;
+    max-height: 50dvh;
+    overflow: hidden;
+    display: flex;
+    > * {
+        flex: 0 0 100%;
+      }
+      
+  }
+
+
+  
+  .card {
+    font-family: 'San Francisco';
+    font-weight: 900;
+    width: 100%;
+    
+    background: linear-gradient(161deg, rgba(2,0,36,1) 0%, rgba(121,9,95,1) 35%, rgba(0,212,255,1) 100%); 
+    color: transparent;
+    background-clip: text;
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 30%) 5px 5px 20px 0;
+    padding: 20px;
+    display: flex;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+  }
+
+  .group {
+    display: flex;
+    gap: 20px;
+    /* Add padding to the right to create a gap between the last and first card. */
+    padding-right: 20px;
+    will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+    animation: scrolling 10s linear infinite;
+  }
+
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+.welcome_button{
+    position: fixed;
+    background-color: #151515;
+    margin-left: 45dvw;
+    width: 10%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 30%) 5px 5px 20px 0;
+    border-radius: 24px;
+    }
+
+.welcome_button_b{
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    font-weight: 500;
+    font-size: large;
+    background: #FAFAFF; 
+    color: transparent;
+    background-clip: text;
+    
+}
+
+.welcome_button:hover{
+    background-color: #ffffff;
+    color: #FAFAFF;
+    transition: .5s ease-out;
+    background: linear-gradient(to left, #FAFAFF, transparent 100%) right;
+    background-size: 200%;
+}
+
+.welcome_button_b:hover{
+    color: #151515;
+    transition: .5s ease-out;
+}
+
+.header{
+    width: 95%;
+    margin-left: 2.5%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    margin-top: -70px;
+    position: fixed;
+}
+
+.spline{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 2;
+    margin-top: 50%;
+    width: 30%;
+    opacity: 0;
+    overflow: hidden;
+    transform: scaleX(1);
+}
+
+.main{
+    width: 101dvw;
+    height: 101dvh;
+}
